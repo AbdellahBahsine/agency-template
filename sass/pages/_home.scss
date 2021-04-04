@@ -1,0 +1,61 @@
+.owl-carousel{
+    height: 960px;
+
+    .owl-dots {
+        margin-top: -90px !important;
+        position: relative;
+        
+        .owl-dot{
+            
+            span{
+                width: 15px !important;
+                height: 15px !important;
+                margin: 0 2px !important;
+            }
+        }
+    }
+
+    .hero{
+        background-image: url('../images/home.jpg');
+        @extend %bg-image;
+        height: 950px;
+        width: 100%;
+    
+        .hero-inner{
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+    
+            .hero-title{
+                font-size: $extraLargeSize;
+                font-weight: 700;
+                margin-top: 315px;
+                margin-bottom: 0;
+    
+                span{
+                    color: $primary-color;
+                }
+            }
+    
+            .hero-text{
+                width: 60%;
+                line-height: 2;
+                margin-bottom: 40px;
+            }
+    
+            button{
+                width: 255px;
+                height: 65px;
+                border-radius: 20px;
+                border: 1px solid $white-color;
+                background: transparent;
+                color: $white-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
