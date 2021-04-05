@@ -1,0 +1,40 @@
+.octagon {
+    width:100px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    &:hover .octagon-inner, &:hover .octagon-inner:before{
+        border: 2px solid $primary-color;
+    }
+
+    &:hover h5{
+        color: $primary-color;
+    }
+}
+
+h5{
+    font-weight: 700;
+    font-size: 26px;
+    transition: 0.8s;
+}
+
+.octagon-inner {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    border: 2px solid $white-color;
+    transition: 0.8s;
+}
+.octagon-inner:before {
+    position: absolute;
+    top: -2px; right: -2px; bottom: -2px; left: -2px;
+    transform: rotate(45deg);
+    content: '';
+    border: 2px solid $white-color;
+    transition: 0.8s;
+}
