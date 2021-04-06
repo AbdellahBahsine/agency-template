@@ -13,6 +13,10 @@ header{
 
         .socials{
 
+            @media screen and (max-width: $max-width-xl) {
+                display: none;
+            }
+
             .social{
                 margin: 0 20px;
                 color: $white-color;
@@ -22,21 +26,74 @@ header{
         .logo{
             font-size: 21px;
             color: $white-color;
+
+            @media screen and (max-width: $max-width-md) {
+                position: relative;
+                z-index: 2;               
+            }
+        }
+
+        .mobile-menu{
+            display: none;
+            font-size: 34px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+
+            @media screen and (max-width: $max-width-md) {
+                display: flex;
+            }
         }
 
         nav{
             display: flex;
 
+            &.open{
+                left: 0;
+                top: 0;
+                height: 100vh;
+                width: 100%;
+                background-color: $secondary-color;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                opacity: 1;
+                transition: 0.8s;
+            }
+
+            @media screen and (max-width: $max-width-md) {
+                position: absolute;
+                opacity: 0;
+                left: -200%;
+            }
+
             .nav-items{
+
+                @media screen and (max-width: $max-width-md) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
                 
                 .nav-item{
                     margin: 0 20px;
                     color: $white-color;
+
+                    @media screen and (max-width: $max-width-md) {
+                        font-size: $mediumSize;
+                        margin-bottom: 40px;
+                    }
                 }
             }
 
             .search-bar{
                 margin-left: 20px;
+
+                @media screen and (max-width: $max-width-md) {
+                    margin-left: 0;
+                    text-align: center;
+                }
 
                 .fa-search{
                     color: $white-color;
