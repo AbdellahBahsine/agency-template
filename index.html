@@ -35,7 +35,11 @@
                     <a href="#contact" class="nav-item">CONTACT</a>
                 </div>
                 <div class="search-bar">
-                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="#" id="search-icon"><i class="fas fa-search"></i></a>
+                    <div id="search-form" class="search-form">
+                        <input type="text" placeholder="Search...">
+                        <button>Search</button>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -119,17 +123,17 @@
                 <h2 class="showcase-title">Simple & Best Way To Showcase Your Work</h2>
                 <p class="showcase-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
                 <div class="categories">
-                    <button class="category" onClick="filterCategory('Branding')">Branding</button>
-                    <button class="category" onClick="filterCategory('Mockup')">Mockup</button>
-                    <button class="category active" onClick="filterCategory('All')">All</button>
-                    <button class="category" onClick="filterCategory('WebSites')">Web Sites</button>
-                    <button class="category" onClick="filterCategory('UI/UX')">UI/UX</button>
+                    <button class="category" data-category="branding">Branding</button>
+                    <button class="category" data-category="mockup">Mockup</button>
+                    <button class="category active" data-category="all">All</button>
+                    <button class="category" data-category="website">Web Sites</button>
+                    <button class="category" data-category="ui/ux">UI/UX</button>
                 </div>
                 <div class="container">
-                    <div class="item item-1"></div>
-                    <div class="item item-2"></div>
-                    <div class="item item-3"></div>
-                    <div class="item item-4"></div>
+                    <div class="item item-1 mockup"></div>
+                    <div class="item item-2 mockup"></div>
+                    <div class="item item-3 mockup"></div>
+                    <div class="item item-4 ui/ux"></div>
                 </div>
                 <a href="#"><button class="btn">See Our Work</button></a>
             </div>
