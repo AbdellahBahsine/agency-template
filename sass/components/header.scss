@@ -111,15 +111,17 @@ header{
                     width: 240px;
                     transition: 0.8s;
 
+                    @media screen and (max-width: $max-width-md) {
+                        background: none;
+                        border: 2px solid #fff;
+                    }
+
                     &.active{
                         top: 34px;
                         opacity: 1;
 
                         @media screen and (max-width: $max-width-md) {
-                            display: flex;
-                            right: 50%;
-                            left: 50%;
-                            transform: translateX(-50%);
+                            position: relative;
                         }
                     }
 
@@ -156,10 +158,6 @@ header{
                         border: none;
                         border-radius: 5px;
                         color: $white-color;
-
-                        @media screen and (max-width: $max-width-md) {
-                            margin-top: 0;
-                        }
                     }
                 }
             }

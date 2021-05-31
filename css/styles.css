@@ -464,16 +464,19 @@ header .header-inner nav .search-bar .search-form {
   width: 240px;
   transition: 0.8s;
 }
+@media screen and (max-width: 768px) {
+  header .header-inner nav .search-bar .search-form {
+    background: none;
+    border: 2px solid #fff;
+  }
+}
 header .header-inner nav .search-bar .search-form.active {
   top: 34px;
   opacity: 1;
 }
 @media screen and (max-width: 768px) {
   header .header-inner nav .search-bar .search-form.active {
-    display: flex;
-    right: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
   }
 }
 header .header-inner nav .search-bar .search-form::after {
@@ -508,11 +511,6 @@ header .header-inner nav .search-bar .search-form button {
   border: none;
   border-radius: 5px;
   color: #fff;
-}
-@media screen and (max-width: 768px) {
-  header .header-inner nav .search-bar .search-form button {
-    margin-top: 0;
-  }
 }
 
 footer {
