@@ -20,31 +20,30 @@ $(document).ready(function(){
     });
   });
 
-  const categoryBtns = document.getElementsByClassName("category");
 
-for(var i = 0; i < categoryBtns.length; i++){
+  $(".categoryBtn").click(function(){
+    var attr = $(this).attr("data-category");
 
-    const categoryBtns = document.getElementsByClassName("category");
+    $(".categoryBtn").removeClass("active");
+    $(this).addClass("active");
 
-    categoryBtns[i].addEventListener("click", function() {
+    $("#container .item").hide();
 
-        const categoryBtns = document.getElementsByClassName("category");
-    
-        const attr = categoryBtns[i].getAttribute('data-category');
-    
-        let items = document.getElementsByClassName("item");
-        items[i].style.display = "none";
-    
-        if(attr == "branding"){
-            attr.style.display = "flex";
-        } else if(attr == "mockup") {
-            attr.style.display = "flex";
-        } else if(attr == "website") {
-            attr.style.display = "flex";
-        } else if(attr == "ui/ux") {
-            attr.style.display = "flex";
-        } else{
-            items.style.display = "flex";
-        }
-    })
-}
+    if(attr == "branding"){
+        $("." + attr).show();
+        $("#container").addClass("filter");
+    }
+    else if(attr == "mockup"){
+        $("." + attr).show();
+        $("#container").addClass("filter");
+    } else if(attr == "website"){
+        $("." + attr).show();
+        $("#container").addClass("filter");
+    } else if(attr == "ui-ux"){
+        $("." + attr).show();
+        $("#container").addClass("filter");
+    } else{
+        $("#container .item").show();
+        $("#container").removeClass("filter");
+    }
+}); 
