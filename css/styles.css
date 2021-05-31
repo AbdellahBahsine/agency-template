@@ -495,7 +495,8 @@ header .header-inner nav .search-bar .search-form::after {
 header .header-inner nav .search-bar .search-form input {
   height: 30px;
   width: 100%;
-  padding: 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #2d3f51;
 }
